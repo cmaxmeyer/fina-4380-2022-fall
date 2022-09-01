@@ -92,6 +92,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">FINA 4380 for Fall 2022</h1>
@@ -106,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../introduction.html">
-                    <no title>
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -920,13 +925,13 @@ It is common to present the loss given by VaR as a positive (absolute) value. Th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[109.8954, 156.9287],
-       [109.9595, 157.1206],
-       [109.9402, 157.0684],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[109.1355, 162.6902],
+       [109.1992, 162.8892],
+       [109.18  , 162.835 ],
        ...,
-       [109.8723, 156.9038],
-       [109.88  , 156.8566],
-       [109.8647, 156.8794]])
+       [109.1125, 162.6644],
+       [109.1202, 162.6155],
+       [109.105 , 162.6391]])
 </pre></div>
 </div>
 </div>
@@ -947,8 +952,8 @@ Note that these are dollar values, since VaR is typically expressed in dollar va
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1334.1207, 1335.4006, 1335.0431, ..., 1333.8803, 1333.683 ,
-       1333.7203])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1359.1287, 1360.4416, 1360.0752, ..., 1358.8845, 1358.6782,
+       1358.7203])
 </pre></div>
 </div>
 </div>
@@ -967,7 +972,7 @@ Note that these are dollar values, since VaR is typically expressed in dollar va
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-1.2294,  0.0506, -0.3069, ..., -1.4698, -1.6671, -1.6297])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-1.2713,  0.0416, -0.3248, ..., -1.5155, -1.7217, -1.6797])
 </pre></div>
 </div>
 </div>
@@ -984,9 +989,9 @@ Note that these are dollar values, since VaR is typically expressed in dollar va
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-day VaR with 99.99% confidence: $3.05
-1-day VaR with 99.9% confidence: $2.70
-1-day VaR with 99.0% confidence: $2.27
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-day VaR with 99.99% confidence: $3.14
+1-day VaR with 99.9% confidence: $2.77
+1-day VaR with 99.0% confidence: $2.34
 </pre></div>
 </div>
 </div>

@@ -92,6 +92,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">FINA 4380 for Fall 2022</h1>
@@ -106,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../introduction.html">
-                    <no title>
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -3645,7 +3650,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.6 µs ± 2.16 µs per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 µs ± 376 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -3657,7 +3662,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33.5 µs ± 3.71 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27.9 µs ± 1.16 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -4022,13 +4027,6 @@ Therefore, the percent change in adjusted closes considers both price changs (i.
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-08-24</th>
-      <td>0.0018</td>
-      <td>-0.0006</td>
-      <td>-0.0112</td>
-      <td>-0.0024</td>
-    </tr>
-    <tr>
       <th>2022-08-25</th>
       <td>0.0149</td>
       <td>0.0262</td>
@@ -4056,9 +4054,16 @@ Therefore, the percent change in adjusted closes considers both price changs (i.
       <td>-0.0056</td>
       <td>-0.0085</td>
     </tr>
+    <tr>
+      <th>2022-08-31</th>
+      <td>-0.0106</td>
+      <td>-0.0069</td>
+      <td>-0.0087</td>
+      <td>-0.0057</td>
+    </tr>
   </tbody>
 </table>
-<p>15271 rows × 4 columns</p>
+<p>15272 rows × 4 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -4125,13 +4130,13 @@ Therefore, the percent change in adjusted closes considers both price changs (i.
       <th>GOOG</th>
       <td>0.5128</td>
       <td>1.0000</td>
-      <td>0.4038</td>
+      <td>0.4039</td>
       <td>0.5526</td>
     </tr>
     <tr>
       <th>IBM</th>
       <td>0.3684</td>
-      <td>0.4038</td>
+      <td>0.4039</td>
       <td>1.0000</td>
       <td>0.4444</td>
     </tr>

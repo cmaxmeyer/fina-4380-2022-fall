@@ -92,6 +92,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/DMSB_100th_LogoMark_CMYK_Horiz.jpg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">FINA 4380 for Fall 2022</h1>
@@ -106,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../introduction.html">
-                    <no title>
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -895,7 +900,7 @@ The following code works as though our data were sorted, but raises a warning th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_53694/386136989.py:1: FutureWarning: Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is deprecated and will raise a KeyError in a future Version.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_116204/386136989.py:1: FutureWarning: Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is deprecated and will raise a KeyError in a future Version.
   ts2[&#39;1/6/2011&#39;:&#39;1/11/2011&#39;]
 </pre></div>
 </div>
@@ -1606,18 +1611,6 @@ See below.</p>
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-08-24</th>
-      <td>297.5633</td>
-      <td>303.6467</td>
-      <td>296.5000</td>
-      <td>297.0967</td>
-      <td>297.0967</td>
-      <td>57259800</td>
-      <td>0.0022</td>
-      <td>0.0226</td>
-      <td>0.0226</td>
-    </tr>
-    <tr>
       <th>2022-08-25</th>
       <td>302.3600</td>
       <td>302.9600</td>
@@ -1665,9 +1658,21 @@ See below.</p>
       <td>-0.0114</td>
       <td>-0.0114</td>
     </tr>
+    <tr>
+      <th>2022-08-31</th>
+      <td>280.6200</td>
+      <td>281.2500</td>
+      <td>271.8100</td>
+      <td>275.6100</td>
+      <td>275.6100</td>
+      <td>52107300</td>
+      <td>-0.0075</td>
+      <td>-0.0250</td>
+      <td>-0.0250</td>
+    </tr>
   </tbody>
 </table>
-<p>3065 rows × 9 columns</p>
+<p>3066 rows × 9 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -2296,7 +2301,7 @@ Also, calculating rolling volatility with the <code class="docutils literal notr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>518 ms ± 35.9 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>422 ms ± 3.73 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -2308,7 +2313,7 @@ Also, calculating rolling volatility with the <code class="docutils literal notr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>223 µs ± 684 ns per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>226 µs ± 2.03 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
