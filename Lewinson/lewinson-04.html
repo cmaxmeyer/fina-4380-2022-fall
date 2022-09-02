@@ -575,11 +575,11 @@ We will keep all returns in percent because regressions with precent are easier 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amzn</span> <span class="o">=</span> <span class="n">amzn</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-	<span class="n">rf</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">],</span>
-	<span class="n">rm</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Mkt-RF&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">],</span>
-	<span class="n">Rm</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Mkt-RF&#39;</span><span class="p">],</span>
-	<span class="n">ri</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(),</span>
-	<span class="n">Ri</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;ri&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;rf&#39;</span><span class="p">]</span>
+    <span class="n">rf</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">],</span>
+    <span class="n">rm</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Mkt-RF&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">],</span>
+    <span class="n">Rm</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Mkt-RF&#39;</span><span class="p">],</span>
+    <span class="n">ri</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(),</span>
+    <span class="n">Ri</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;ri&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;rf&#39;</span><span class="p">]</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -679,10 +679,10 @@ We will use statsmodels’ formula API, which provides an R-like formula syntax.
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   540.5</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Thu, 01 Sep 2022</td> <th>  Prob (F-statistic):</th> <td>1.34e-80</td>
+  <th>Date:</th>             <td>Fri, 02 Sep 2022</td> <th>  Prob (F-statistic):</th> <td>1.34e-80</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:00:14</td>     <th>  Log-Likelihood:    </th> <td> -913.22</td>
+  <th>Time:</th>                 <td>09:16:34</td>     <th>  Log-Likelihood:    </th> <td> -913.22</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   481</td>      <th>  AIC:               </th> <td>   1830.</td>
@@ -732,8 +732,8 @@ We will use statsmodels’ formula API, which provides an R-like formula syntax.
 <span class="n">first_date</span> <span class="o">=</span> <span class="n">amzn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2020-09&#39;</span><span class="p">:,</span> <span class="p">[</span><span class="s1">&#39;Ri&#39;</span><span class="p">,</span> <span class="s1">&#39;Rm&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">last_date</span> <span class="o">=</span> <span class="n">amzn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2020-09&#39;</span><span class="p">:,</span> <span class="p">[</span><span class="s1">&#39;Ri&#39;</span><span class="p">,</span> <span class="s1">&#39;Rm&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
-	<span class="s1">&#39;Beta Plot for AMZN Daily Returns</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> 
-	<span class="s1">&#39;from </span><span class="si">{}</span><span class="s1"> to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span> <span class="n">last_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="s1">&#39;Beta Plot for AMZN Daily Returns</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> 
+    <span class="s1">&#39;from </span><span class="si">{}</span><span class="s1"> to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span> <span class="n">last_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">))</span>
 <span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -759,8 +759,8 @@ We will use statsmodels’ formula API, which provides an R-like formula syntax.
 <span class="n">first_date</span> <span class="o">=</span> <span class="n">amzn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2020-09&#39;</span><span class="p">:,</span> <span class="p">[</span><span class="s1">&#39;Ri&#39;</span><span class="p">,</span> <span class="s1">&#39;Rm&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">last_date</span> <span class="o">=</span> <span class="n">amzn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2020-09&#39;</span><span class="p">:,</span> <span class="p">[</span><span class="s1">&#39;Ri&#39;</span><span class="p">,</span> <span class="s1">&#39;Rm&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
-	<span class="s1">&#39;Beta Plot for AMZN Daily Returns</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> 
-	<span class="s1">&#39;from </span><span class="si">{}</span><span class="s1"> to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span> <span class="n">last_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="s1">&#39;Beta Plot for AMZN Daily Returns</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> 
+    <span class="s1">&#39;from </span><span class="si">{}</span><span class="s1"> to </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span> <span class="n">last_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">))</span>
 <span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -795,10 +795,10 @@ However, the formula API provides two functions that help us avoid adding column
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   540.5</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Thu, 01 Sep 2022</td> <th>  Prob (F-statistic):</th> <td>1.34e-80</td>
+  <th>Date:</th>             <td>Fri, 02 Sep 2022</td> <th>  Prob (F-statistic):</th> <td>1.34e-80</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:00:15</td>     <th>  Log-Likelihood:    </th> <td> -913.22</td>
+  <th>Time:</th>                 <td>09:16:35</td>     <th>  Log-Likelihood:    </th> <td> -913.22</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   481</td>      <th>  AIC:               </th> <td>   1830.</td>
@@ -883,10 +883,10 @@ As with CAPM estimations, we should estimate the three-factor model with one to 
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   265.0</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Thu, 01 Sep 2022</td> <th>  Prob (F-statistic):</th> <td>3.49e-101</td>
+  <th>Date:</th>             <td>Fri, 02 Sep 2022</td> <th>  Prob (F-statistic):</th> <td>3.49e-101</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>16:00:15</td>     <th>  Log-Likelihood:    </th> <td> -858.99</td> 
+  <th>Time:</th>                 <td>09:16:35</td>     <th>  Log-Likelihood:    </th> <td> -858.99</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   481</td>      <th>  AIC:               </th> <td>   1726.</td> 
